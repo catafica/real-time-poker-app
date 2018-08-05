@@ -1,0 +1,47 @@
+body{
+    background-image: url('/img/pexels.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.centered-form__form{
+
+  margin-top: 120px;
+  background-color: white ;
+  margin-left: auto;
+  margin-right: auto;
+  width: 300px;
+  height: 380px;
+  border-radius: 10px 10px 10px 10px;
+}
+
+.field1{
+  margin-top: 10px;
+}
+
+.field1 p{
+  font-size: 27px;
+  font-weight: bold;
+
+}
+
+.field2{
+  margin-top: 0px;
+  width: 230px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.field3{
+  width: 230px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.field4{
+  /* width: 230px; */
+  margin-left: auto;
+  margin-right: auto;
+  width: 230px;
+  /* border: 2px solid; */
+  margin-top: 16px;
+}

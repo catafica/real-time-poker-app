@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Join | PokerApp</title>
+    <link rel="stylesheet" href="/css/index.css" type="text/css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+  </head>
+  <body>
+    <div class="centered-form__form">
+    <form>
+    <div class="form-field field1">
+      <p style="text-align: center;">Join a Poker Room</p>
+    </div>
+    <div class="form-field field2">
+      <label style="font-size: 16px;">Username</label>
+
+      <input id="username" type="text" autofocus>
+    </div>
+    <div class="form-field field3">
+      <label style="font-size: 16px;">Password</label>
+
+      <input id="password" type="text">
+    </div>
+    <div class="form-field field3">
+      <label style="font-size: 16px;">Room name</label>
+      <br>
+      <input id="room" type="text">
+    </div>
+    <div class="form-field field4">
+      <button id="btn" class="btn waves-effect waves-light cyan lighten-3" style="width:100%; font-weight:bold; border-radius: 5px 5px 5px 5px">Join<i class="material-icons right">send</i>
+  </button>
+
+    </div>
+  </form>
+  </div>
+  <script src="http://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+  <script type="text/javascript">
+        var userName = document.getElementById('username');
+        var password = document.getElementById('password');
+        var room = document.getElementById('room');
+        var btn = document.getElementById('btn');
+        btn.addEventListener('click',function(e){
+          e.preventDefault();
+          var user = userName.value;
+          var pass = password.value;
+          var roomNr = room.value;
+
+          var sendInfo = {
+            username: user,
+            password: pass,
+            room: roomNr
+          };
+
+          $.ajax({
+            url: `/login`,
+            method: "POST",
+            dataType: "json",
+            contentType: 'application/json',
+            data: JSON.stringify(sendInfo)
+          }).done(function (results) {
+                if (results){
+                    window.location = `/pokerRoom`;
+                }
+              
+          });
+
+          username.value = '';
+          password.value = '';
+          room.value = '';
+
+        });
+  </script>
+
+  </body>
+</html>

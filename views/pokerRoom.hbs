@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/css/reset.css" type="text/css">
+    <link rel="stylesheet" href="/css/pokerRoom.css" type="text/css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+    <title>Poker table</title>
+  </head>
+  <body>
+
+
+
+    <div class="main-body">
+
+      <div class="log-out">
+         <a id="logout" class="waves-effect waves-light btn-small logout red z-depth-2 cyan lighten-2"><i class="material-icons left">do_not_disturb</i>Log out</a>
+         <a id="room" class="waves-effect waves-light btn-small red z-depth-2 cyan lighten-2"><i class="material-icons left">cloud</i>Room {{roomNumber}}</a>
+
+      </div>
+      <div class="cata">
+
+      </div>  
+
+      <div class="play-area">
+
+        <!-- <h4 class="center" style="color:white;">Texas Holdem</h4> -->
+        <div class="poker-table">
+
+          <div class="betAreaPlayer2 no-display">
+                <div class="div1background">
+                </div>
+                <div class="baniPlayer2">
+                    10$
+                </div>
+          </div>
+          <div class="betAreaPlayer1 no-display">
+                <div class="div2background">
+                </div>
+                <div class="baniPlayer1">
+                    5$
+                </div>
+          </div>
+          <div class="potArea no-display">
+              <div class="banuts1">
+
+              </div>
+              <div class="banuts2">
+
+              </div>
+              <div class="banuts3">
+
+              </div>
+              <div class="banuts4">
+
+              </div>
+              <div class="banuts5">
+
+              </div>
+              <div class="banuts6">
+
+              </div>
+              <div class="banuts7">
+
+              </div>
+              <div class="pot">
+                  Pot: 22$
+              </div>
+          </div>
+
+          <div id="intro" class="intro no-display">
+              <h2 id="startsIn" class="startsIn">Game Starts in</h2>
+              <h1 id="startsCD" class="startsCD">10</h1>
+          </div>
+
+                <div id="second-player-stats">
+                    <p class="stats user2" style="text-align: center;">Empty</p>
+                    <p class="stats money2" style="text-align: center;">Seat</p>
+                </div>
+                <div id="second-player">
+                    <ul class="second-player">
+                        <li class="secondPlayer1 player"><img id="none" class="none" src="img/cardback.png"></li>
+                        <li class="secondPlayer2 player"><img id="none" class="none" src="img/cardback.png"></li>
+                    </ul>
+                </div>
+
+
+
+                <div id="board">
+                    <ul class="boardPlayers">
+                        <li class="board1 player board"><img id="none" class="none" src="img/cardback.png"></li>
+                        <li class="board2 player board"><img id="none" class="none" src="img/cardback.png"></li>
+                        <li class="board3 player board"><img id="none" class="none" src="img/cardback.png"></li>
+                        <li class="board4 player board"><img id="none" class="none" src="img/cardback.png"></li>
+                        <li class="board5 player board"><img id="none" class="none" src="img/cardback.png"></li>
+                    </ul>
+                </div>
+                <div id="first-player">
+                    <ul class="first-player">
+                      <li class="firstPlayer1 player"><img id="none" class="none" src="img/cardback.png"></li>
+                      <li class="firstPlayer2 player"><img id="none" class="none" src="img/cardback.png"></li>
+                    </ul>
+                </div>
+                <div id="first-player-stats">
+                  <p class="stats user1" style="text-align: center;">Empty</p>
+                  <p class="stats money1" style="text-align: center;">Seat</p>
+                </div>
+
+
+        </div>
+
+
+      </div>
+      <div class="footer-buttons">
+
+
+        <div class="input-buttons z-depth-1">
+            <div class="myInput">
+              <input id="bet-input" type="text" name="" value="10" >
+            </div>
+            <div class="range-field">
+              <input type="range" id="test5" min="0" max="{{points}}" />
+            </div>
+        </div>
+
+
+        <div class="action-buttons">
+          <a id="fold" class="waves-effect waves-light btn-large red z-depth-1 red">Fold</a>
+          <a id="check" class="waves-effect waves-light btn-large red z-depth-1 red">Check</a>
+          <a id="call" class="waves-effect waves-light btn-large red z-depth-1 red">Call</a>
+          <a id="bet" class="waves-effect waves-light btn-large red z-depth-1 red">Bet</a>
+        </div>
+        <div class="some-buttons">
+          <a id="min" class="waves-effect waves-light btn-small red z-depth-1 red" style="height: 32px;">Min</a>
+          <a id="bb" class="waves-effect waves-light btn-small red z-depth-1 red" style="height: 32px;">3BB</a>
+          <a id="pot" class="waves-effect waves-light btn-small red z-depth-1 red" style="height: 32px;">Pot</a>
+          <a id="max" class="waves-effect waves-light btn-small red z-depth-1 red" style="height: 32px;">Max</a>
+        </div>
+      </div>
+
+    </div>
+
+
+
+  <script src="http://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+  <script type="text/javascript">
+      var btn = document.getElementById('logout');
+      btn.addEventListener('click',function(){
+
+        $.ajax({
+          url: `/logout`,
+          method: "GET",
+          dataType: "json",
+          contentType: 'application/json'
+        }).done(function(results){
+          if (results){
+            window.location = '/'
+          }
+        });
+      })
+  </script>
+
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="/js/pokerRoom.js"></script>
+  </body>
+</html>
