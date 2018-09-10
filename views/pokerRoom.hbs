@@ -18,18 +18,24 @@
     <div class="main-body">
 
       <div class="log-out">
+        <span id="clock" class="cata z-depth-2 no-display">
+          <p class="time">Time:</p>
+          <p id="timer" class="timer">40</p>
+        </span>
          <a id="logout" class="waves-effect waves-light btn-small logout red z-depth-2 cyan lighten-2"><i class="material-icons left">do_not_disturb</i>Log out</a>
          <a id="room" class="waves-effect waves-light btn-small red z-depth-2 cyan lighten-2"><i class="material-icons left">cloud</i>Room {{roomNumber}}</a>
 
       </div>
-      <div class="cata">
 
-      </div>  
 
       <div class="play-area">
 
         <!-- <h4 class="center" style="color:white;">Texas Holdem</h4> -->
         <div class="poker-table">
+          <div id="hand-description" class="hand-description no-display">
+              <p id="playerName">player wins with:</p>
+              <p id="playerHolding">9's and 6's</p>
+          </div>
 
           <div class="betAreaPlayer2 no-display">
                 <div class="div1background">
@@ -67,7 +73,7 @@
               <div class="banuts7">
 
               </div>
-              <div class="pot">
+              <div id="myPot" class="pot">
                   Pot: 22$
               </div>
           </div>
@@ -76,15 +82,17 @@
               <h2 id="startsIn" class="startsIn">Game Starts in</h2>
               <h1 id="startsCD" class="startsCD">10</h1>
           </div>
-
+          <div class="table-text">
+              <p class="myText">PartyPoker</p>
+          </div>
                 <div id="second-player-stats">
                     <p class="stats user2" style="text-align: center;">Empty</p>
-                    <p class="stats money2" style="text-align: center;">Seat</p>
+                    <p id="money2" class="stats money2" style="text-align: center;">Seat</p>
                 </div>
                 <div id="second-player">
                     <ul class="second-player">
-                        <li class="secondPlayer1 player"><img id="none" class="none" src="img/cardback.png"></li>
-                        <li class="secondPlayer2 player"><img id="none" class="none" src="img/cardback.png"></li>
+                        <li class="secondPlayer1 player"><img id="card3" class="none" src="img/cardback.png"></li>
+                        <li class="secondPlayer2 player"><img id="card4" class="none" src="img/cardback.png"></li>
                     </ul>
                 </div>
 
@@ -92,22 +100,22 @@
 
                 <div id="board">
                     <ul class="boardPlayers">
-                        <li class="board1 player board"><img id="none" class="none" src="img/cardback.png"></li>
-                        <li class="board2 player board"><img id="none" class="none" src="img/cardback.png"></li>
-                        <li class="board3 player board"><img id="none" class="none" src="img/cardback.png"></li>
-                        <li class="board4 player board"><img id="none" class="none" src="img/cardback.png"></li>
-                        <li class="board5 player board"><img id="none" class="none" src="img/cardback.png"></li>
+                        <li class="board1 player board"><img id="board1" class="none opacity" src="img/cardback.png"></li>
+                        <li class="board2 player board"><img id="board2" class="none opacity" src="img/cardback.png"></li>
+                        <li class="board3 player board"><img id="board3" class="none opacity" src="img/cardback.png"></li>
+                        <li class="board4 player board"><img id="board4" class="none opacity" src="img/cardback.png"></li>
+                        <li class="board5 player board"><img id="board5" class="none opacity" src="img/cardback.png"></li>
                     </ul>
                 </div>
                 <div id="first-player">
                     <ul class="first-player">
-                      <li class="firstPlayer1 player"><img id="none" class="none" src="img/cardback.png"></li>
-                      <li class="firstPlayer2 player"><img id="none" class="none" src="img/cardback.png"></li>
+                      <li class="firstPlayer1 player"><img id="card1" class="none" src="img/cardback.png"></li>
+                      <li class="firstPlayer2 player"><img id="card2" class="none" src="img/cardback.png"></li>
                     </ul>
                 </div>
                 <div id="first-player-stats">
                   <p class="stats user1" style="text-align: center;">Empty</p>
-                  <p class="stats money1" style="text-align: center;">Seat</p>
+                  <p id="money1" class="stats money1" style="text-align: center;">Seat</p>
                 </div>
 
 
@@ -118,7 +126,7 @@
       <div class="footer-buttons">
 
 
-        <div class="input-buttons z-depth-1">
+        <div id="find" class="input-buttons z-depth-1">
             <div class="myInput">
               <input id="bet-input" type="text" name="" value="10" >
             </div>

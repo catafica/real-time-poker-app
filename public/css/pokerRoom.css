@@ -79,7 +79,7 @@ ul.first-player{
   margin-top:-53px;
   width: 140px;
   height: 50px;
-  border: 1px solid white;
+  border: 2px solid white;
   margin-left: auto;
   margin-right: auto;
   border-radius: 10px 10px 10px 10px ;
@@ -88,7 +88,7 @@ ul.first-player{
 #first-player-stats{
   width: 140px;
   height: 50px;
-  border: 1px solid white;
+  border: 2px solid white;
   margin-left: auto;
   margin-right: auto;
   border-radius: 10px 10px 10px 10px ;
@@ -252,6 +252,7 @@ border-radius: 1px solid black;
   opacity: 0.86;
   border-radius: 240px 240px 240px 240px ;
  position: absolute;
+ z-index:20;
    /* border: 20px solid transparent; */
 }
 .startsIn{
@@ -369,7 +370,7 @@ border-radius: 1px solid black;
 
 .potArea{
   position: absolute;
-  margin-left: 485px;
+  margin-left: 495px;
   margin-top: 134px;
   width: 120px;
   height: 100px;
@@ -456,15 +457,85 @@ border-radius: 1px solid black;
 }
 
 .cata{
+  /* margin-top: 10px; */
+  margin-left: 70px;
+  margin-top: 50px;
+  width: 125px;
+  height: 50px;
   border: 1px solid;
-  width: 150px;
-  margin-top: 25px;
-  /* margin-right: 200px; */
-  margin-left: 84%;
-  margin-right: 16%;
-  /* margin-right:auto; */
-  height: 100px;
-  /* text-align: right; */
   position: absolute;
   border-radius: 30px 30px 30px 30px ;
+  border: 2px solid grey;
+  background: linear-gradient(#ff5252  ,#ff1744 );
+}
+
+.time{
+  float: left;
+  color: white;
+  font-size: 20px;
+  margin-left: 18px;
+  margin-top: 7px;
+}
+.timer{
+  float: right;
+  color: white;
+  font-size: 20px;
+  margin-top: 7px;
+  margin-right: 23px;
+}
+
+.opacity{
+  opacity: 0.01;
+}
+
+.table-text{
+  margin-left: 0%;
+  margin-top: 0%;
+  width: 640px;
+  height: 360px;
+
+  border-radius: 240px 240px 240px 240px ;
+ position: absolute;
+ z-index: 1;
+}
+
+.myText{
+  color: black;
+  margin-top: 110px;
+  font-size: 80px;
+  margin-left: auto;
+  margin-right: auto;
+  /* border: 2px solid; */
+  text-align: center;
+  opacity: 0.1;
+  position: relative;
+
+}
+
+#board{
+  position: relative;
+  z-index: 5;
+}
+
+.hand-description{
+  position: absolute;
+  margin-top: 140px;
+  width: 200px;
+  height: 200px;
+  color: yellow;
+  font-size: 20px;
+  font-family: sans-serif;
+  text-align: center;
+  margin-left: -5px;
+}
+
+#playerName{
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 16px;
+}
+#playerHolding{
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 22px;
 }
